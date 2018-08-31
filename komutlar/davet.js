@@ -1,6 +1,5 @@
-const Discord = require('discord.js');
+﻿const Discord = require('discord.js');
 const client = new Discord.Client();
-const ayarlar = require('../ayarlar.json');
 
 exports.run = (client, message) => {
   if (message.channel.type !== 'dm') {
@@ -8,24 +7,25 @@ exports.run = (client, message) => {
     .setColor(0x00AE86)
     .setTimestamp()
     .setAuthor(message.author.username, message.author.avatarURL)
-    .setDescription('Özel Mesajlarına Bilgi Mesajımı Attım! :postbox: ');
+    .setDescription('Özel mesajlarını kontrol et. :postbox:');
     message.channel.sendEmbed(ozelmesajkontrol) }
 	const pingozel = new Discord.RichEmbed()
     .setColor(0x00AE86)
+    .setTimestamp()
     .setAuthor(message.author.username, message.author.avatarURL)
-    .setDescription('**27.08.2018 Tarihinde @Alpha_ZEVKSİZ#9049  Tarafından Yapılmıştır. Diğer Bütün Bilgiler İçin z!yardım**');
+    .setDescription('İşte Davet Linkim: https://discordapp.com/oauth2/authorize?client_id=483430044975366147&scope=bot&permissions=2146958847  ');
     return message.author.sendEmbed(pingozel)
 };
 
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ['bot bilgi', 'botbilgi', 'bb', 'botb', 'bbot', 'hakkında', 'bot hakkında', 'bothakkında'],
+  aliases: ['botu ekle', 'botu davet et', 'botuekle', 'invite'],
   permLevel: 0
 };
 
 exports.help = {
-  name: 'bilgi',
-  description: 'Bot ile ilgili bilgi verir.',
-  usage: 'bilgi'
+  name: 'davet',
+  description: 'Botun davet linkini gönderir.',
+  usage: 'davet'
 };
