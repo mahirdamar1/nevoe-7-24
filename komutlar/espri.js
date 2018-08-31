@@ -1,4 +1,4 @@
-﻿var request = require('request');
+﻿var request = require('espri');
 
 request('https://api.eggsybot.xyz/espri', function (error, response, body) {
     if (error) return console.log('Hata:', error); // Hata olursa, konsola göndersin,
