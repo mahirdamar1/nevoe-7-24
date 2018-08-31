@@ -13,7 +13,7 @@ exports.run = (client, message) => {
 	const pingozel = new Discord.RichEmbed()
     .setColor(0x00AE86)
     .setAuthor(message.author.username, message.author.avatarURL)
-    .setDescription('**27.08.2018 Tarihinde @Alpha_ZEVKSİZ#9049  Tarafından Yapılmıştır. Diğer Bütün Bilgiler İçin z!yardım**');
+    .setDescription('**Bu bot spyer#8131 ve neVoe#8146 tarafından desturlanmıştır**');
     return message.author.sendEmbed(pingozel)
 };
 
